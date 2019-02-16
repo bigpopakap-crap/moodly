@@ -5,7 +5,8 @@ Moodly
 
 # Development
 
-Moodly is developed in a git monorepo so all client, server and storage changes can move in lock-step. The repo is stored on Github, under the project name [bigpopakap/moodly][git-url].
+Moodly is developed in a git monorepo so all client, server and storage changes can move in lock-step. The repo is stored on Github:
+* Github [bigpopakap/moodly][git-url].
 
 For more information about these three components, refer to each README:
 * [Client][client-readme]
@@ -14,7 +15,8 @@ For more information about these three components, refer to each README:
 
 # Deployment
 
-Moodly is deployed with Heroku, under the project name [bigpopakap/moodly][heroku-url].
+Moodly is deployed with Heroku:
+* Heroku [bigpopakap/moodly][heroku-url].
 
 The app runs in a staging and production environment:
 * [Staging][staging-url]
@@ -24,14 +26,20 @@ Staging is deployed automatically with all merged code. Production is deployed m
 
 # Tests and CI
 
-
+There will be tests and CI, I swear.
 
 # Running and testing locally
 
+Once there's actually code, there will actually be something to run.
 
+# Other dependencies
 
+Things I should add:
 
+* Linting
+* Automatic package updates
 
+[==================== LINKS BEGIN HERE ==========================]: #
 
 [staging-url]: http://some.link
 [production-url]: http://some.link
