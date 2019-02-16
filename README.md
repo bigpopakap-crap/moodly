@@ -46,6 +46,6 @@ Things I should add:
 [git-url]: http://some.link
 [heroku-url]: http://some.link
 
-[client-readme]: ./client/README.md
+[client-readme]: ./moodly-web/README.md
 [server-readme]: ./server/README.md
 [storage-readme]: ./storage/README.md
