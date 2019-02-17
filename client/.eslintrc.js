@@ -4,10 +4,10 @@ module.exports = {
     'es6': true
   },
   'extends': [
-      'plugin:prettier/recommended',
-      'plugin:jsx-a11y/strict',
-      'react-app'
-    ],
+    'plugin:prettier/recommended',
+    'react-app',
+    'plugin:jsx-a11y/strict'
+  ],
   'globals': {
     'Atomics': 'readonly',
     'SharedArrayBuffer': 'readonly'
