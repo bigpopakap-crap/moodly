@@ -1,13 +1,13 @@
 {
-  "main.css": "/moodly/static/css/main.d2ea478c.chunk.css",
-  "main.js": "/moodly/static/js/main.a1eb6ba6.chunk.js",
-  "main.js.map": "/moodly/static/js/main.a1eb6ba6.chunk.js.map",
+  "main.css": "/moodly/static/css/main.52829288.chunk.css",
+  "main.js": "/moodly/static/js/main.3c6f48d9.chunk.js",
+  "main.js.map": "/moodly/static/js/main.3c6f48d9.chunk.js.map",
   "runtime~main.js": "/moodly/static/js/runtime~main.b6ecadbf.js",
   "runtime~main.js.map": "/moodly/static/js/runtime~main.b6ecadbf.js.map",
   "static/js/2.72b6d255.chunk.js": "/moodly/static/js/2.72b6d255.chunk.js",
   "static/js/2.72b6d255.chunk.js.map": "/moodly/static/js/2.72b6d255.chunk.js.map",
   "index.html": "/moodly/index.html",
-  "precache-manifest.c296e5c82f87eab4840c8058e9a7faf4.js": "/moodly/precache-manifest.c296e5c82f87eab4840c8058e9a7faf4.js",
+  "precache-manifest.87237a59568d700aa4adf48ccaa99ef9.js": "/moodly/precache-manifest.87237a59568d700aa4adf48ccaa99ef9.js",
   "service-worker.js": "/moodly/service-worker.js",
-  "static/css/main.d2ea478c.chunk.css.map": "/moodly/static/css/main.d2ea478c.chunk.css.map"
+  "static/css/main.52829288.chunk.css.map": "/moodly/static/css/main.52829288.chunk.css.map"
 }
