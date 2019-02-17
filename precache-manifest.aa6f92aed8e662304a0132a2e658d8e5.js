@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "97bada1e85d0c15c28a7",
-    "url": "/moodly/static/css/main.44985e7a.chunk.css"
+    "revision": "626ac05461796aa078d3",
+    "url": "/moodly/static/css/main.a18e7477.chunk.css"
   },
   {
-    "revision": "97bada1e85d0c15c28a7",
-    "url": "/moodly/static/js/main.97bada1e.chunk.js"
+    "revision": "626ac05461796aa078d3",
+    "url": "/moodly/static/js/main.626ac054.chunk.js"
   },
   {
     "revision": "b6ecadbfd31132a31b33",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/moodly/static/js/2.063ce5bc.chunk.js"
   },
   {
-    "revision": "72cda7cc870459e8182685c0f48075f7",
+    "revision": "d934e71bf3882fb9eaee66f8c16c6e61",
     "url": "/moodly/index.html"
   }
 ];

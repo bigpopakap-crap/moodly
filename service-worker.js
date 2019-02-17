@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/moodly/precache-manifest.74a4eaf79f9d9bc2f79c9e2a10b226d5.js"
+  "/moodly/precache-manifest.aa6f92aed8e662304a0132a2e658d8e5.js"
 );
 
 workbox.clientsClaim();
@@ -29,6 +29,6 @@ workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute("/moodly/index.html", {
-  
+
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
