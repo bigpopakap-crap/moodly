@@ -7,6 +7,6 @@
     "build": "cd client && npm run build",
     "test": "cd client && npm test",
     "postinstall": "cd client && npm install",
-    "deploy": "cd client && npm deploy"
+    "deploy": "cd client && npm run deploy"
   }
 }
