@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "moodly-web/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
