@@ -7,6 +7,6 @@ node_js:
 # https://lord.io/blog/2014/travis-multiple-subdirs/
 # TODO(bigpopakap): figure out how to make this work when the other subdirectories are added
 env:
-  - TEST_DIR=moodly-web
+  - TEST_DIR=client
 
 script: cd $TEST_DIR && npm install && npm test
