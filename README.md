@@ -9,7 +9,8 @@ Moodly
 # Development
 
 Moodly is developed in a git monorepo so all client, server and storage changes can move in lock-step. The repo is stored on Github:
-* Github [bigpopakap/moodly][git-url].
+* Github [bigpopakap/moodly][git-url]
+* [Github pages][github-pages] for prettier-looking documentation
 
 For more information about these three components, refer to each README:
 * [Client][client-readme]
@@ -18,10 +19,7 @@ For more information about these three components, refer to each README:
 
 # Deployment
 
-Moodly is deployed with Heroku:
-* Heroku [bigpopakap/moodly][heroku-url].
-
-The app runs in a staging and production environment:
+Moodly is deployed with [Github pages][github-pages], running in a staging and production environment:
 * [Staging][staging-url]
 * [Production][production-url]
 
@@ -44,10 +42,10 @@ Things I should add:
 
 [==================== LINKS BEGIN HERE ==========================]: #
 
-[staging-url]: http://some.link
-[production-url]: http://some.link
-[git-url]: http://some.link
-[heroku-url]: http://some.link
+[github-pages]: https://bigpopakap.github.io/moodly/
+[staging-url]: https://bigpopakap.github.io/moodly/staging
+[production-url]: https://bigpopakap.github.io/moodly/production
+[git-url]: https://github.com/bigpopakap/moodly
 
 [client-readme]: ./client/README.md
 [server-readme]: ./server/README.md
