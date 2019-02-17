@@ -4,13 +4,12 @@ Moodly
 [![Tests](https://travis-ci.org/bigpopakap/moodly.svg?branch=master)](https://travis-ci.org/bigpopakap/moodly)
 [![Dependencies](https://badges.greenkeeper.io/bigpopakap/moodly.svg)](https://greenkeeper.io/)
 
-[Moodly]([touchy-feel-production-url]) is an website that lets you quickly log your mood. When you have thoughts or feelings to log, just quickly jot them down. You can then analyze trends and process your general mood. More information can be found on [the  website][touchy-feel-production-url].
+[Moodly]([production-url]) is an website that lets you quickly log your mood. When you have thoughts or feelings to log, just quickly jot them down. You can then analyze trends and process your general mood. More information can be found on [the  website][production-url].
 
 # Development
 
 Moodly is developed in a git monorepo so all client, server and storage changes can move in lock-step. The repo is stored on Github:
 * Github [bigpopakap/moodly][git-url]
-* [Github pages][github-pages] for prettier-looking documentation
 
 For more information about these three components, refer to each README:
 * [Client][client-readme]
@@ -19,7 +18,7 @@ For more information about these three components, refer to each README:
 
 # Deployment
 
-Moodly is deployed with [Github pages][github-pages], running in a staging and production environment:
+Moodly is deployed with Github pages, running in a staging and production environment:
 * [Staging][staging-url]
 * [Production][production-url]
 
@@ -42,9 +41,8 @@ Things I should add:
 
 [==================== LINKS BEGIN HERE ==========================]: #
 
-[github-pages]: https://bigpopakap.github.io/moodly/
-[staging-url]: https://bigpopakap.github.io/moodly/staging
-[production-url]: https://bigpopakap.github.io/moodly/production
+[staging-url]: https://bigpopakap.github.io/moodly/
+[production-url]: https://some.link
 [git-url]: https://github.com/bigpopakap/moodly
 
 [client-readme]: ./client/README.md
