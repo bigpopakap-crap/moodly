@@ -3,6 +3,7 @@ Moodly
 
 [![Tests](https://travis-ci.org/bigpopakap/moodly.svg?branch=master)](https://travis-ci.org/bigpopakap/moodly)
 [![Dependencies](https://badges.greenkeeper.io/bigpopakap/moodly.svg)](https://greenkeeper.io/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 [Moodly]([production-url]) is an website that lets you quickly log your mood. When you have thoughts or feelings to log, just quickly jot them down. You can then analyze trends and process your general mood. More information can be found on [the  website][production-url].
 

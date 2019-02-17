@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - "11.4"
 
-script: npm install && npm test
+script: yarn install && yarn lint && yarn test
 
 notifications:
   email: false
