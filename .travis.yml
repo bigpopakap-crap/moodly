@@ -10,3 +10,6 @@ env:
   - TEST_DIR=client
 
 script: cd $TEST_DIR && npm install && npm test
+
+notifications:
+  email: false
