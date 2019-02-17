@@ -1,6 +1,8 @@
 Moodly
 -----------------
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bigpopakap/moodly.svg)](https://greenkeeper.io/)
+
 [Moodly]([touchy-feel-production-url]) is an website that lets you quickly log your mood. When you have thoughts or feelings to log, just quickly jot them down. You can then analyze trends and process your general mood. More information can be found on [the  website][touchy-feel-production-url].
 
 # Development
