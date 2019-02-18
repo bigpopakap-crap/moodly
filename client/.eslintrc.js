@@ -8,6 +8,7 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
     'react-app',
+    'plugin:react/recommended',
     'plugin:jsx-a11y/strict'
   ],
   'globals': {

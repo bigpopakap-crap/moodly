@@ -1,0 +1,8 @@
+@import '../../styles/theme';
+
+.Navbar {
+  &.navbar--bottom {
+    top: auto !important;
+    bottom: 0 !important;
+  }
+}
