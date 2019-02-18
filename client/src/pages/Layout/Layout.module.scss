@@ -1,3 +1,13 @@
 @import '../../styles/theme';
 
-.Layout {} // stylelint-disable block-no-empty
+$navbar-height: 64px;
+
+.Layout {
+  &.layout--navbar-top {
+    padding-top: $navbar-height;
+  }
+
+  &.layout--navbar-bottom {
+    padding-bottom: $navbar-height;
+  }
+}
