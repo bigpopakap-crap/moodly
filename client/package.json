@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/react": "^16.8.3",
     "@types/react-dom": "^16.8.2",
+    "@typescript-eslint/eslint-plugin": "^1.3.0",
     "babel-eslint": "^9.x",
     "eslint": "^5.12.0",
     "eslint-config-prettier": "^4.0.0",
@@ -19,13 +20,13 @@
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-flowtype": "^2.x",
     "eslint-plugin-import": "^2.x",
+    "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-jsx-a11y": "^6.x",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.x",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-typescript": "^0.14.0",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
@@ -38,8 +39,8 @@
     "typescript-eslint-parser": "^22.0.0"
   },
   "scripts": {
-    "lint": "yarn eslint --ext ts,tsx ./ && yarn stylelint **/*.{css,module.css,scss,module.scss}",
-    "lint:fix": "yarn eslint --ext ts,tsx --fix ./ && yarn stylelint **/*.{css,module.css,scss,module.scss} --fix",
+    "lint": "yarn eslint --ext json,js,jsx,ts,tsx ./ && yarn stylelint **/*.{css,module.css,scss,module.scss}",
+    "lint:fix": "yarn eslint --ext json,js,jsx,ts,tsx --fix ./ && yarn stylelint **/*.{css,module.css,scss,module.scss} --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
