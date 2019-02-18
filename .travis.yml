@@ -3,7 +3,25 @@ language: node_js
 node_js:
   - "11.4"
 
-script: yarn install && yarn lint && yarn test
+jobs:
+  include:
+    - stage: "Build"
+    - name: "yarn check"
+      script: yarn check
+    - name: "Yarn check --integrity"
+      script: yarn check --integrity
+    - name: "Yarn check --verify-tree"
+      script: yarn check --verify-tree
+    - name: "Production build"
+      script: yarn build
+
+    - stage: "Lint"
+      name: "yarn lint"
+      script: yarn lint
+
+    - stage: "Test"
+      name: "yarn test"
+      script: yarn test
 
 notifications:
   email: false
