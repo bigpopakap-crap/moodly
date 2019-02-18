@@ -6,10 +6,11 @@ module.exports = {
   'extends': [
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
+    'plugin:css-modules/recommended',
     'react-app',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/strict'
+    'plugin:jsx-a11y/strict',
+    'plugin:prettier/recommended'
   ],
   'globals': {
     'Atomics': 'readonly',
@@ -27,6 +28,7 @@ module.exports = {
   'plugins': [
     '@typescript-eslint',
     'json',
+    'css-modules',
     'react',
     'jsx-a11y',
     'prettier'
