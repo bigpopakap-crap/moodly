@@ -4,6 +4,8 @@ module.exports = {
     'es6': true
   },
   'extends': [
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
     'react-app',
     'plugin:jsx-a11y/strict'
@@ -12,8 +14,9 @@ module.exports = {
     'Atomics': 'readonly',
     'SharedArrayBuffer': 'readonly'
   },
-  'parser': 'typescript-eslint-parser',
+  'parser': '@typescript-eslint/parser',
   'parserOptions': {
+    "project": "./tsconfig.json",
     'ecmaFeatures': {
       'jsx': true
     },
@@ -21,10 +24,11 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
-    'typescript',
-    'prettier',
+    '@typescript-eslint',
+    'json',
     'react',
-    'jsx-a11y'
+    'jsx-a11y',
+    'prettier'
   ],
   'rules': {
     'import/order': 'error',
