@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import classnames from 'classnames';
 import Navbutton from './Navbutton/Navbutton';
 import styles from './Navbar.module.scss';
 
+/**
+ * Defines the possible locations on the page for the Navbar to render itself
+ */
 export enum NavbarPosition {
   TOP = 'top',
   BOTTOM = 'bottom'
 }
 
 interface Props {
+  /**
+   * Where the Navbar should render itself
+   */
   position: NavbarPosition;
 }
 
 export default class Navbar extends Component<Props> {
-  public render() {
+  public render(): ReactNode {
     const isNavbarBottom = this.props.position === NavbarPosition.BOTTOM;
     const navbarPositionClassNames = { [styles['navbar--bottom']]: isNavbarBottom };
 
