@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 import Button from '@material-ui/core/Button';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbutton.module.scss';
@@ -23,7 +23,7 @@ interface Props {
 }
 
 export default class Navbutton extends Component<Props> {
-  public render() {
+  public render(): ReactNode {
     return (
       <NavLink
         exact={this.props.exact}

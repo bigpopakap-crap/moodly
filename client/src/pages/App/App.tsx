@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import HomePage from '../HomePage/HomePage';
@@ -12,7 +12,7 @@ import DashboardPage from '../DashboardPage/DashboardPage';
 import styles from './App.module.scss';
 
 export default class App extends Component {
-  public render() {
+  public render(): ReactNode {
     return (
       <div className={styles.App}>
         <Router>
