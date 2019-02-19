@@ -1,3 +1,7 @@
 @import '../../styles/theme';
 
-.MoodCreatePage {} // stylelint-disable block-no-empty
+.MoodCreatePage {
+  .MoodInputForm {
+    height: 100%;
+  }
+}

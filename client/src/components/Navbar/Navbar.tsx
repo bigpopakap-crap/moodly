@@ -6,7 +6,7 @@ import Navbutton from './Navbutton/Navbutton';
 import styles from './Navbar.module.scss';
 
 /**
- * Defines the possible locations on the page for the Navbar to render itself
+ * Defines the possible locations on the page for the MoodInputForm to render itself
  */
 export enum NavbarPosition {
   TOP = 'top',
@@ -15,7 +15,7 @@ export enum NavbarPosition {
 
 interface Props {
   /**
-   * Where the Navbar should render itself
+   * Where the MoodInputForm should render itself
    */
   position: NavbarPosition;
 }
