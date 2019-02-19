@@ -27,7 +27,7 @@ class Layout extends Component<Props> {
     return (
       <div className={classnames(styles.Layout, layoutNavbarClass)}>
         <Navbar position={navbarPosition} />
-        <div className="page-content">{this.props.children}</div>
+        <div className={styles['page-content']}>{this.props.children}</div>
       </div>
     );
   }

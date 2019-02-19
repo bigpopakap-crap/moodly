@@ -3,11 +3,23 @@
 $navbar-height: 64px;
 
 .Layout {
+  // This layout needs to control the full page area
+  width: 100vw;
+  height: 100vh;
+
+  .page-content {
+    height: 100%;
+  }
+
   &.layout--navbar-top {
-    padding-top: $navbar-height;
+    .page-content {
+      padding-top: $navbar-height;
+    }
   }
 
   &.layout--navbar-bottom {
-    padding-bottom: $navbar-height;
+    .page-content {
+      padding-bottom: $navbar-height;
+    }
   }
 }

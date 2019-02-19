@@ -1,7 +1,7 @@
 @import '../../styles/theme';
 
 .MoodCreatePage {
-  .MoodInputForm {
-    height: 100%;
-  }
+  padding: 0 $layout-page-gutter;
+
+  .MoodInputForm {} // stylelint-disable block-no-empty
 }

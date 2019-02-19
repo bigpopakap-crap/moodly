@@ -31,9 +31,9 @@ export default class Navbar extends Component<Props> {
           {/* Not all routes need to be here, but the URLs do need to match what's in the Router */}
           <Navbutton exact path="/" label="Home" />
           <Navbutton exact path="/login" label="Login" />
-          <Navbutton exact path="/journal" label="Log your mood" />
+          <Navbutton exact path="/journal" label="Journal" />
           <Navbutton exact path="/issues" label="Issues" />
-          <Navbutton exact path="/moods" label="Mood history" />
+          <Navbutton exact path="/moods" label="Moods" />
           <Navbutton exact path="/dashboard" label="Graphs" />
         </Toolbar>
       </AppBar>
