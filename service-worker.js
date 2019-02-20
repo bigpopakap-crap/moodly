@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/moodly/precache-manifest.87237a59568d700aa4adf48ccaa99ef9.js"
+  "/moodly/precache-manifest.9cf8827cbbab811ebb5e3ab4a3f9c281.js"
 );
 
 workbox.clientsClaim();
