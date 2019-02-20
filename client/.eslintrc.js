@@ -26,6 +26,9 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
+    'typescript', // TODO(#37) remove this and the eslint-plugin-typescript package
+                  // becuase it's supposed to be replaced by @typescript-eslint
+                  // but IntelliJ doesn't work with @typescript-eslint for some reason
     '@typescript-eslint',
     'json',
     'css-modules',
