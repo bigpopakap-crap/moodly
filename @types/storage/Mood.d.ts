@@ -1,45 +1,45 @@
-import {DateTime} from "../util/DateTime";
-import {Color} from "../client/Color";
-import {IconKey} from "../client/Icon";
-import {TranslationKey} from "../client/Translation";
-import {Id} from "./Id";
+import { Color } from '../client/Color';
+import { IconKey } from '../client/Icon';
+import { TranslationKey } from '../client/Translation';
+import { DateTime } from './DateTime';
+import { Id } from './Id';
 
 /**
  * An individual user-entered mood entry. This is the more prominent "unit" of data that
  * the user enters. The whole app is driven by these, entered by the user.
  */
 export interface MoodEntry {
-    id: Id,
+  id: Id;
 
-    /**
-     * The timestamp this event corresponds to. This is not necessarily when it was posted, but
-     * rather when the user felt the mood described in this entry.
-     *
-     * @user-updatable true
-     */
-    dateTime: DateTime
+  /**
+   * The timestamp this event corresponds to. This is not necessarily when it was posted, but
+   * rather when the user felt the mood described in this entry.
+   *
+   * @user-updatable true
+   */
+  dateTime: DateTime;
 
-    /**
-     * The freeform text entered by the user.
-     *
-     * @user-updatable false
-     */
-    content: string,
+  /**
+   * The freeform text entered by the user.
+   *
+   * @user-updatable false
+   */
+  content: string;
 
-    /**
-     * The sentiment the user was feeling at the time of the entry.
-     *
-     * @user-updatable true
-     */
-    sentiment: MoodSentiment,
+  /**
+   * The sentiment the user was feeling at the time of the entry.
+   *
+   * @user-updatable true
+   */
+  sentiment: MoodSentiment;
 
-    /**
-     * The {@link MoodEvent} to which this entry is tied. All {@link MoodEntry}s tied to the same
-     * {@link MoodEvent} are assumed to be related to the same real-world incident.
-     *
-     * @user-updatable true
-     */
-    event: MoodEvent
+  /**
+   * The {@link MoodEvent} to which this entry is tied. All {@link MoodEntry}s tied to the same
+   * {@link MoodEvent} are assumed to be related to the same real-world incident.
+   *
+   * @user-updatable true
+   */
+  event: MoodEvent;
 }
 
 /**
@@ -50,21 +50,21 @@ export interface MoodEntry {
  * inciting incident.
  */
 export interface MoodEvent {
-    id: Id,
+  id: Id;
 
-    /**
-     * The schema under which this {@link MoodEvent} falls.
-     *
-     * @user-updatable true
-     */
-    schema: MoodSchema,
+  /**
+   * The schema under which this {@link MoodEvent} falls.
+   *
+   * @user-updatable true
+   */
+  schema: MoodSchema;
 
-    /**
-     * The tags associated with this mood event and all the associated {@link MoodEntry}s
-     *
-     * @user-updatable true
-     */
-    tags: Array<MoodTag>
+  /**
+   * The tags associated with this mood event and all the associated {@link MoodEntry}s
+   *
+   * @user-updatable true
+   */
+  tags: MoodTag[];
 }
 
 /**
@@ -77,39 +77,39 @@ export interface MoodEvent {
  * In effect, this defines the widest (least granular) categorization of {@link MoodEvent}s
  */
 export interface MoodSchema {
-    id: Id,
+  id: Id;
 
-    /**
-     * The translation key to use to label this schema in the UI.
-     * This will not be defined if it is a user-defined schema.
-     * This *must* be defined for a built-in schema.
-     *
-     * @user-updatable false
-     */
-    translationKey?: TranslationKey,
+  /**
+   * The translation key to use to label this schema in the UI.
+   * This will not be defined if it is a user-defined schema.
+   * This *must* be defined for a built-in schema.
+   *
+   * @user-updatable false
+   */
+  translationKey?: TranslationKey;
 
-    /**
-     * A user-defined UI label for this schema that overrides {@link translationKey}.
-     * This will not be defined if it is a built-in schema.
-     * This *must* be defined for a  user-defined schema.
-     *
-     * @user-updatable true
-     */
-    customLabel?: string,
+  /**
+   * A user-defined UI label for this schema that overrides {@link translationKey}.
+   * This will not be defined if it is a built-in schema.
+   * This *must* be defined for a  user-defined schema.
+   *
+   * @user-updatable true
+   */
+  customLabel?: string;
 
-    /**
-     * The icon used to represent this schema.
-     *
-     * @user-updatable true - if it is a user-defined schema.
-     */
-    iconKey: IconKey,
+  /**
+   * The icon used to represent this schema.
+   *
+   * @user-updatable true - if it is a user-defined schema.
+   */
+  iconKey: IconKey;
 
-    /**
-     * The color used to render this schema in the UI.
-     *
-     * @user-updatable true - if it is a user-defined schema.
-     */
-    primaryColor: Color
+  /**
+   * The color used to render this schema in the UI.
+   *
+   * @user-updatable true - if it is a user-defined schema.
+   */
+  primaryColor: Color;
 }
 
 /**
@@ -117,13 +117,13 @@ export interface MoodSchema {
  * to neutral, to very positive.
  */
 export enum MoodSentiment {
-    FIRE_NEGATIVE = -3,
-    HOT_NEGATIVE = -2,
-    MILD_NEGATIVE = -1,
-    NEUTRAL = 0,
-    MILD_POSITIVE = 1,
-    HOT_POSITIVE = 2,
-    FIRE_POSITIVE = 3
+  FIRE_NEGATIVE = -3,
+  HOT_NEGATIVE = -2,
+  MILD_NEGATIVE = -1,
+  NEUTRAL = 0,
+  MILD_POSITIVE = 1,
+  HOT_POSITIVE = 2,
+  FIRE_POSITIVE = 3
 }
 
 /**
@@ -131,19 +131,19 @@ export enum MoodSentiment {
  * {@link MoodEvent}s and their associated {@link MoodEntry}s
  */
 export interface MoodTag {
-    id: Id,
+  id: Id;
 
-    /**
-     * The user-entered display name.
-     *
-     * @user-updatable true
-     */
-    label: string,
+  /**
+   * The user-entered display name.
+   *
+   * @user-updatable true
+   */
+  label: string;
 
-    /**
-     * The color used to display this tag in the UI.
-     *
-     * @user-updatable true
-     */
-    color: Color
+  /**
+   * The color used to display this tag in the UI.
+   *
+   * @user-updatable true
+   */
+  color: Color;
 }

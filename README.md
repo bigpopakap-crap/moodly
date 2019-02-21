@@ -49,4 +49,4 @@ Things I should add:
 
 [client-readme]: ./client/README.md
 [server-readme]: ./server/README.md
-[storage-readme]: ./types/README.md
+[storage-readme]: ./@types/README.md

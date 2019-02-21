@@ -1,0 +1,22 @@
+{
+  "name": "@types/moodly",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://bigpopakap.github.io/moodly/",
+  "scripts": {
+    "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
+    "lint:fix": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx --fix ./",
+    "hard-reset": "rm -rf ./node_modules && yarn cache clean"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.0",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-typescript": "^0.14.0",
+    "prettier": "^1.16.4",
+    "typescript": "^3.3.3"
+  }
+}

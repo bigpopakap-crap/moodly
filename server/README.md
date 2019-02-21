@@ -5,4 +5,4 @@ The Moodly server is a thin NodeJS app that serves data from the [data store][st
 
 [==================== LINKS BEGIN HERE ==========================]: #
 
-[storage-readme]: ../types/README.md
+[storage-readme]: ../@types/README.md

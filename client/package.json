@@ -45,8 +45,8 @@
     "typescript-eslint-parser": "^22.0.0"
   },
   "scripts": {
-    "lint": "yarn eslint --ext json,js,jsx,ts,tsx ./ && yarn stylelint **/*.{css,module.css,scss,module.scss}",
-    "lint:fix": "yarn eslint --ext json,js,jsx,ts,tsx --fix ./ && yarn stylelint **/*.{css,module.css,scss,module.scss} --fix",
+    "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./ && yarn stylelint **/*.{css,module.css,scss,module.scss}",
+    "lint:fix": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx --fix ./ && yarn stylelint **/*.{css,module.css,scss,module.scss} --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
