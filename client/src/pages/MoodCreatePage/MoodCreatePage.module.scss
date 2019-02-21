@@ -1,3 +1,7 @@
 @import '../../styles/theme';
 
-.MoodCreatePage {} // stylelint-disable block-no-empty
+.MoodCreatePage {
+  padding: 0 $layout-page-gutter;
+
+  .MoodInputForm {} // stylelint-disable block-no-empty
+}

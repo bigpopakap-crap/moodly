@@ -1,6 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import withWidth from '@material-ui/core/withWidth';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
+import classnames from 'classnames';
 import Navbar, { NavbarPosition } from '../../components/Navbar/Navbar';
 import styles from './Layout.module.scss';
 
@@ -18,10 +19,15 @@ class Layout extends Component<Props> {
     const useBottomNavbar = this.props.width === 'xs';
     const navbarPosition = useBottomNavbar ? NavbarPosition.BOTTOM : NavbarPosition.TOP;
 
+    const layoutNavbarClass = {
+      [styles['layout--navbar-top']]: !useBottomNavbar,
+      [styles['layout--navbar-bottom']]: useBottomNavbar
+    };
+
     return (
-      <div className={styles.Layout}>
+      <div className={classnames(styles.Layout, layoutNavbarClass)}>
         <Navbar position={navbarPosition} />
-        <div className="page-content">{this.props.children}</div>
+        <div className={styles['page-content']}>{this.props.children}</div>
       </div>
     );
   }

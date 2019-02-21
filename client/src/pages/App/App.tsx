@@ -1,5 +1,5 @@
 import React, { Component, ReactNode } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import HomePage from '../HomePage/HomePage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -15,10 +15,10 @@ export default class App extends Component {
   public render(): ReactNode {
     return (
       <div className={styles.App}>
-        <Router>
-          <>
-            <CssBaseline />
+        <CssBaseline />
 
+        <Router>
+          <RouteSwitch>
             {/* Homepage, signup, login */}
             <Route exact path="/" component={HomePage} />
             <Route exact path="/login" component={LoginPage} />
@@ -34,7 +34,7 @@ export default class App extends Component {
 
             {/* Dashboard with graphs and charts */}
             <Route exact path="/dashboard" component={DashboardPage} />
-          </>
+          </RouteSwitch>
         </Router>
       </div>
     );
