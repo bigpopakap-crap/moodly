@@ -1,12 +1,5 @@
 import React, { Component, ReactNode } from 'react';
-import {
-  Button,
-  FormControl,
-  FormHelperText,
-  Input,
-  InputLabel,
-  TextField
-} from '@material-ui/core';
+import { Button, OutlinedInput, TextField } from '@material-ui/core';
 import classnames from 'classnames';
 import styles from './MoodInputForm.module.scss';
 
@@ -24,29 +17,24 @@ export default class MoodInputForm extends Component<Props> {
   public render(): ReactNode {
     return (
       <form className={classnames(this.props.className, styles.MoodInputForm)}>
-        <FormControl fullWidth variant="outlined">
-          <InputLabel htmlFor="descriptionInput">Description</InputLabel>
-          <TextField
-            id="descriptionInput"
-            aria-describedby="descriptionHelperText"
-            multiline
-            rows={MIN_MULTILINE_ROWS}
-            rowsMax={MAX_MULTILINE_ROWS}
-          />
-          <FormHelperText id="descriptionHelperText">This is the description.</FormHelperText>
-        </FormControl>
+        <TextField
+          id="descriptionInput"
+          fullWidth
+          multiline
+          rows={MIN_MULTILINE_ROWS}
+          rowsMax={MAX_MULTILINE_ROWS}
+          placeholder="Describe your problems"
+          variant="outlined"
+        />
 
-        <FormControl variant="outlined">
-          <InputLabel htmlFor="affectInput">Affect</InputLabel>
-          <TextField id="affectInput" aria-describedby="affectHelperText" />
-          <FormHelperText id="affectHelperText">This is the description.</FormHelperText>
-        </FormControl>
+        <TextField id="affectInput" variant="outlined" />
 
-        <FormControl variant="outlined">
-          <InputLabel htmlFor="dateTimeInput">Date and time</InputLabel>
-          <Input id="dateTimeInput" type="datetime-local" aria-describedby="dateTimeHelperText" />
-          <FormHelperText id="dateTimeHelperText">This is the description.</FormHelperText>
-        </FormControl>
+        <OutlinedInput
+          id="dateTimeInput"
+          type="datetime-local"
+          aria-describedby="dateTimeHelperText"
+          labelWidth={2}
+        />
 
         <Button fullWidth variant="contained" color="primary">
           Submit
