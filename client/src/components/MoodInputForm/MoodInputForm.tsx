@@ -1,6 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import { Button, OutlinedInput, TextField } from '@material-ui/core';
 import classnames from 'classnames';
+import { MoodEntry } from '../../../../@types/storage/Mood';
 import styles from './MoodInputForm.module.scss';
 
 const MIN_MULTILINE_ROWS = 12;
@@ -11,6 +12,12 @@ interface Props {
    * Additional CSS classes for the root element of  this component
    */
   className?: string;
+
+  /**
+   * Handler for when a {@link MoodEntry} is created.
+   * @param arg0 the mood that was created.
+   */
+  onCreate: (arg0: MoodEntry) => void;
 }
 
 export default class MoodInputForm extends Component<Props> {
