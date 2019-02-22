@@ -1,11 +1,11 @@
 import React, { Component, ReactNode } from 'react';
 import Layout from '../Layout/Layout';
-import MoodInputForm from '../../components/MoodInputForm/MoodInputForm';
+import MoodEntryCreateForm from '../../components/MoodEntryCreateForm/MoodEntryCreateForm';
 import { MoodEntry } from '../../../../types/storage/Mood';
 import styles from './MoodCreatePage.module.scss';
 
 export default class MoodCreatePage extends Component {
-  private handleMoodCreated(mood: MoodEntry) {
+  private handleMoodCreated(mood: MoodEntry): void {
     console.log(mood);
   }
 
@@ -13,7 +13,10 @@ export default class MoodCreatePage extends Component {
     return (
       <Layout>
         <div className={styles.MoodCreatePage}>
-          <MoodInputForm className={styles.MoodInputForm} onCreate={this.handleMoodCreated} />
+          <MoodEntryCreateForm
+            className={styles.MoodEntryCreateForm}
+            onCreate={this.handleMoodCreated}
+          />
         </div>
       </Layout>
     );

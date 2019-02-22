@@ -2,7 +2,7 @@ import React, { Component, ReactNode } from 'react';
 import { Button, OutlinedInput, TextField } from '@material-ui/core';
 import classnames from 'classnames';
 import { MoodEntry } from '../../../../types/storage/Mood';
-import styles from './MoodInputForm.module.scss';
+import styles from './MoodEntryCreateForm.module.scss';
 
 const MIN_MULTILINE_ROWS = 12;
 const MAX_MULTILINE_ROWS = 24;
@@ -20,10 +20,10 @@ interface Props {
   onCreate: (arg0: MoodEntry) => void;
 }
 
-export default class MoodInputForm extends Component<Props> {
+export default class MoodEntryCreateForm extends Component<Props> {
   public render(): ReactNode {
     return (
-      <form className={classnames(this.props.className, styles.MoodInputForm)}>
+      <form className={classnames(this.props.className, styles.Component)}>
         <TextField
           id="descriptionInput"
           fullWidth

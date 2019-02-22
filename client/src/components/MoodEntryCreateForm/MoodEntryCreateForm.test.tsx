@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MoodInputForm from './MoodInputForm';
+import MoodEntryCreateForm from './MoodEntryCreateForm';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<MoodInputForm />, div);
+  ReactDOM.render(<MoodEntryCreateForm onCreate={() => {}} />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
