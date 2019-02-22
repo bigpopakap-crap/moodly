@@ -3,6 +3,7 @@ import { IconKey } from '../client/Icon';
 import { TranslationKey } from '../client/Translation';
 import { DateTime } from './DateTime';
 import { Id } from './Id';
+import { StoredObject } from './StoredObject';
 
 /**
  * An individual user-entered mood entry. This is the more prominent "unit" of data that
@@ -14,15 +15,13 @@ import { Id } from './Id';
  *      If so, should the tags be applied to the event or the entries?
  */
 export interface MoodEntry {
-  id: Id;
-
   /**
    * The timestamp this event corresponds to. This is not necessarily when it was posted, but
    * rather when the user felt the mood described in this entry.
    *
    * @user-updatable true
    */
-  dateTime: DateTime;
+  moodOccurredAt: DateTime;
 
   /**
    * The freeform text entered by the user.
@@ -54,6 +53,11 @@ export interface MoodEntry {
 }
 
 /**
+ * The stored version of a {@link MoodEntry}, that has the database fields defined in {@link StoredObject}
+ */
+export interface StoredMoodEntry extends StoredObject, MoodEntry {}
+
+/**
  * The word "schema" comes from the domain of social psychology. It's meant to denote the
  * different aspects of life in which we operate (ex. "love", "work", "family", etc.)
  *
@@ -65,8 +69,6 @@ export interface MoodEntry {
  * TODO should these just be combined with tags and treated the same?
  */
 export interface MoodSchema {
-  id: Id;
-
   /**
    * The translation key to use to label this schema in the UI.
    * This will not be defined if it is a user-defined schema.
@@ -101,6 +103,11 @@ export interface MoodSchema {
 }
 
 /**
+ * The stored version of a {@link MoodSchema}, that has the database fields defined in {@link StoredObject}
+ */
+export interface StoredMoodSchema extends StoredObject, MoodSchema {}
+
+/**
  * A number indicating how strongly an emotion is felt. An emotion can range from very negative,
  * to neutral, to very positive.
  */
@@ -121,8 +128,6 @@ export enum MoodSentiment {
  * TODO should custom tags be allowed to have sentiments associated with them?
  */
 export interface MoodTag {
-  id: Id;
-
   /**
    * The user-entered display name.
    *
@@ -137,3 +142,8 @@ export interface MoodTag {
    */
   color: Color;
 }
+
+/**
+ * The stored version of a {@link MoodTag}, that has the database fields defined in {@link StoredObject}
+ */
+export interface StoredMoodTag extends StoredObject, MoodTag {}
