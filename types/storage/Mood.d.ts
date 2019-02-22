@@ -2,7 +2,6 @@ import { Color } from '../client/Color';
 import { IconKey } from '../client/Icon';
 import { TranslationKey } from '../client/Translation';
 import { DateTime } from './DateTime';
-import { Id } from './Id';
 import { StoredObject } from './StoredObject';
 
 /**

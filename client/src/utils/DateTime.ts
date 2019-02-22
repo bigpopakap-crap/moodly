@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import { DateTime as StoredDateTime } from '../../../types/storage/DateTime';
+import { DateTime as StoredDateTime } from '@moodly/types/storage/DateTime';
 
 export function now(): StoredDateTime {
   return {

@@ -1,11 +1,11 @@
 import React, { Component, ReactNode } from 'react';
 import { Button, OutlinedInput, TextField } from '@material-ui/core';
 import classnames from 'classnames';
-import { MoodEntry, MoodSentiment } from '../../../../types/storage/Mood';
-import { DateTime } from '../../../../types/storage/DateTime';
+import { MoodEntry, MoodSentiment } from '@moodly/types/storage/Mood';
+import { Color } from '@moodly/types/client/Color';
+import { DateTime } from '@moodly/types/storage/DateTime';
+import { IconKey } from '@moodly/types/client/Icon';
 import { now } from '../../utils/DateTime';
-import { IconKey } from '../../../../types/client/Icon';
-import { Color } from '../../../../types/client/Color';
 import styles from './MoodEntryCreateForm.module.scss';
 
 const MIN_MULTILINE_ROWS = 12;

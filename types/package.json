@@ -2,7 +2,6 @@
   "name": "@moodly/types",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bigpopakap.github.io/moodly/",
   "scripts": {
     "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
     "lint:fix": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx --fix ./",
