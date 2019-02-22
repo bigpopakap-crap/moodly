@@ -2,6 +2,8 @@ import React, { Component, ReactNode } from 'react';
 import { Button, OutlinedInput, TextField } from '@material-ui/core';
 import classnames from 'classnames';
 import { MoodEntry } from '../../../../types/storage/Mood';
+import { DateTime } from '../../../../types/storage/DateTime';
+import { now } from '../../utils/DateTime';
 import styles from './MoodEntryCreateForm.module.scss';
 
 const MIN_MULTILINE_ROWS = 12;
@@ -20,7 +22,23 @@ interface Props {
   onCreate: (arg0: MoodEntry) => void;
 }
 
-export default class MoodEntryCreateForm extends Component<Props> {
+interface State {
+  moodOccurredAt: DateTime;
+  content: string;
+  // TODO add other fields of a MoodEntry
+}
+
+export default class MoodEntryCreateForm extends Component<Props, State> {
+  public constructor(props: Props) {
+    super(props);
+    this.state = {
+      moodOccurredAt: now(),
+      content: ''
+    };
+  }
+
+  private onSubmit(): void {}
+
   public render(): ReactNode {
     return (
       <form className={classnames(this.props.className, styles.Component)}>
@@ -43,7 +61,7 @@ export default class MoodEntryCreateForm extends Component<Props> {
           labelWidth={2}
         />
 
-        <Button fullWidth variant="contained" color="primary">
+        <Button fullWidth variant="contained" color="primary" action={this.onSubmit}>
           Submit
         </Button>
       </form>

@@ -28,14 +28,14 @@ export interface MoodEntry {
    *
    * @user-updatable false
    */
-  content: string;
+  readonly content: string;
 
   /**
    * The schema under which this entry falls.
    *
    * @user-updatable false
    */
-  schema: MoodSchema;
+  readonly schema: MoodSchema;
 
   /**
    * The sentiment the user was feeling at the time of the entry.
@@ -76,7 +76,7 @@ export interface MoodSchema {
    *
    * @user-updatable false
    */
-  translationKey?: TranslationKey;
+  readonly translationKey?: TranslationKey;
 
   /**
    * A user-defined UI label for this schema that overrides {@link translationKey}.
