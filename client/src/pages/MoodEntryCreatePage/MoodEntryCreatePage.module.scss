@@ -1,0 +1,7 @@
+@import '../../styles/theme';
+
+.Page {
+  padding: 0 $layout-page-gutter;
+
+  .form {} // stylelint-disable block-no-empty
+}

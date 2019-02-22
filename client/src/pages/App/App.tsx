@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch as RouteSwitch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import MoodCreatePage from '../MoodCreatePage/MoodCreatePage';
+import MoodEntryCreatePage from '../MoodEntryCreatePage/MoodEntryCreatePage';
 import styles from './App.module.scss';
 
 export default class App extends Component {
@@ -12,7 +12,7 @@ export default class App extends Component {
 
         <Router>
           <RouteSwitch>
-            <Route exact path="/journal" component={MoodCreatePage} />
+            <Route exact path="/journal" component={MoodEntryCreatePage} />
             <Redirect to="/journal" />
           </RouteSwitch>
         </Router>
