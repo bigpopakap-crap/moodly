@@ -26,7 +26,7 @@ export default class Navbar extends Component<Props> {
     const navbarPositionClassNames = { [styles['navbar--bottom']]: isNavbarBottom };
 
     return (
-      <AppBar className={classnames(styles.Navbar, navbarPositionClassNames)}>
+      <AppBar className={classnames(styles.Component, navbarPositionClassNames)}>
         <Toolbar>
           {/* Not all routes need to be here, but the URLs do need to match what's in the Router */}
           <Navbutton exact path="/" label="Test" />
