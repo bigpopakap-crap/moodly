@@ -29,12 +29,12 @@ export default class Navbar extends Component<Props> {
       <AppBar className={classnames(styles.Navbar, navbarPositionClassNames)}>
         <Toolbar>
           {/* Not all routes need to be here, but the URLs do need to match what's in the Router */}
-          <Navbutton exact path="/" label="Home" />
-          <Navbutton exact path="/login" label="Login" />
-          <Navbutton exact path="/journal" label="Journal" />
-          <Navbutton exact path="/issues" label="Issues" />
-          <Navbutton exact path="/moods" label="Moods" />
-          <Navbutton exact path="/dashboard" label="Graphs" />
+          <Navbutton exact path="/" label="Test" />
+          <Navbutton exact path="/login" label="Test" />
+          <Navbutton exact path="/journal" label="Test" />
+          <Navbutton exact path="/issues" label="Test" />
+          <Navbutton exact path="/moods" label="Test" />
+          <Navbutton exact path="/dashboard" label="Test" />
         </Toolbar>
       </AppBar>
     );
