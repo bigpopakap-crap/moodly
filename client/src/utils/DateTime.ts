@@ -1,7 +1,8 @@
-import { DateTime } from '../../../types/storage/DateTime';
+import { DateTime } from 'luxon';
+import { DateTime as StoredDateTime } from '../../../types/storage/DateTime';
 
-export function now(): DateTime {
+export function now(): StoredDateTime {
   return {
-    unixTimeSecondsUTC: 0
+    unixTimeSecondsUTC: DateTime.utc().toSeconds()
   };
 }
