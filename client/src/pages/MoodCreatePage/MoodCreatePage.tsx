@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import Layout from '../Layout/Layout';
 import MoodInputForm from '../../components/MoodInputForm/MoodInputForm';
-import { MoodEntry } from '../../../../@types/storage/Mood';
+import { MoodEntry } from '../../../../types/storage/Mood';
 import styles from './MoodCreatePage.module.scss';
 
 export default class MoodCreatePage extends Component {

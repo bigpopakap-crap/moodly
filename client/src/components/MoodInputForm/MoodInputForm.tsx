@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import { Button, OutlinedInput, TextField } from '@material-ui/core';
 import classnames from 'classnames';
-import { MoodEntry } from '../../../../@types/storage/Mood';
+import { MoodEntry } from '../../../../types/storage/Mood';
 import styles from './MoodInputForm.module.scss';
 
 const MIN_MULTILINE_ROWS = 12;

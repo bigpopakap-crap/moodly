@@ -1,5 +1,5 @@
 {
-  "name": "@types/moodly",
+  "name": "@moodly/types",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://bigpopakap.github.io/moodly/",

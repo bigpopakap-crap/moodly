@@ -2,7 +2,7 @@
   "groups": {
     "default": {
       "packages": [
-        "@types/package.json",
+        "types/package.json",
         "client/package.json",
         "package.json"
       ]
