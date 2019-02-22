@@ -7,6 +7,11 @@ import { Id } from './Id';
 /**
  * An individual user-entered mood entry. This is the more prominent "unit" of data that
  * the user enters. The whole app is driven by these, entered by the user.
+ *
+ * TODO is it possible to group these into related "events" so that it's possible to see
+ *      how long a particular sentiment lasted? I.e. some might be strong sentiments, but don't
+ *      last long, and some might be mild but last a long time.
+ *      If so, should the tags be applied to the event or the entries?
  */
 export interface MoodEntry {
   id: Id;
@@ -27,6 +32,13 @@ export interface MoodEntry {
   content: string;
 
   /**
+   * The schema under which this entry falls.
+   *
+   * @user-updatable false
+   */
+  schema: MoodSchema;
+
+  /**
    * The sentiment the user was feeling at the time of the entry.
    *
    * @user-updatable true
@@ -34,33 +46,7 @@ export interface MoodEntry {
   sentiment: MoodSentiment;
 
   /**
-   * The {@link MoodEvent} to which this entry is tied. All {@link MoodEntry}s tied to the same
-   * {@link MoodEvent} are assumed to be related to the same real-world incident.
-   *
-   * @user-updatable true
-   */
-  event: MoodEvent;
-}
-
-/**
- * A grouping of individual {@link MoodEntry}s that are related to the same real-world occurrence.
- *
- * For example, an incident might happen that prompts one entry and then a bunch of follow-ups. The
- * follow-ups will be updates to the same incident with new reflections and feelings about the original
- * inciting incident.
- */
-export interface MoodEvent {
-  id: Id;
-
-  /**
-   * The schema under which this {@link MoodEvent} falls.
-   *
-   * @user-updatable true
-   */
-  schema: MoodSchema;
-
-  /**
-   * The tags associated with this mood event and all the associated {@link MoodEntry}s
+   * The tags associated with this entry.
    *
    * @user-updatable true
    */
@@ -71,10 +57,12 @@ export interface MoodEvent {
  * The word "schema" comes from the domain of social psychology. It's meant to denote the
  * different aspects of life in which we operate (ex. "love", "work", "family", etc.)
  *
- * These are different facets of a person's life. Each {@link MoodEvent} will be tagged with
+ * These are different facets of a person's life. Each {@link MoodEntry} will be tagged with
  * a {@link MoodSchema} so users can keep a pulse on how different aspects of their life are going.
  *
- * In effect, this defines the widest (least granular) categorization of {@link MoodEvent}s
+ * In effect, this defines the widest (least granular) categorization of {@link MoodEntry}s
+ *
+ * TODO should these just be combined with tags and treated the same?
  */
 export interface MoodSchema {
   id: Id;
@@ -117,18 +105,20 @@ export interface MoodSchema {
  * to neutral, to very positive.
  */
 export enum MoodSentiment {
-  FIRE_NEGATIVE = -3,
-  HOT_NEGATIVE = -2,
-  MILD_NEGATIVE = -1,
+  STRONG_NEGATIVE = -3,
+  MILD_NEGATIVE = -2,
+  FLEETING_NEGATIVE = -1,
   NEUTRAL = 0,
-  MILD_POSITIVE = 1,
-  HOT_POSITIVE = 2,
-  FIRE_POSITIVE = 3
+  FLEETING_POSITIVE = 1,
+  MILD_POSITIVE = 2,
+  STRONG_POSITIVE = 3
 }
 
 /**
- * A custom tag that can be applied to {@link MoodEvent}s to help filter and analyze
- * {@link MoodEvent}s and their associated {@link MoodEntry}s
+ * A custom tag that can be applied to {@link MoodEntry}s to help filter and analyze
+ * {@link MoodEntry}s and their associated {@link MoodEntry}s
+ *
+ * TODO should custom tags be allowed to have sentiments associated with them?
  */
 export interface MoodTag {
   id: Id;
